@@ -3,36 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Landing Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Expert Arborist Services Brisbane - Certified Tree Care</title>
     <meta name="description" content="Professional arborist services in Brisbane. Safe tree removal, stump grinding, and expert tree care for enhanced curb appeal.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body class="font-sans antialiased bg-white">
     <!-- Header -->
     <header class="fixed w-full bg-white/95 backdrop-blur-sm shadow-md z-50">
         <nav class="container mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
-                <a href="/" class="text-2xl font-bold text-gray-800">Brisbane Arborists</a>
+                <a href="https://briansavic.github.io/-expert-arborist-services-in-brisbane---certified--2025-04-29-9xo2l" class="text-2xl font-bold text-gray-800 hover:text-green-600 transition-colors duration-300">Brisbane Arborists</a>
+                
+                <!-- Desktop Menu -->
                 <div class="hidden md:flex space-x-8">
-                    <a href="#services" class="text-gray-600 hover:text-gray-900 transition-colors">Services</a>
-                    <a href="#benefits" class="text-gray-600 hover:text-gray-900 transition-colors">Benefits</a>
-                    <a href="#faq" class="text-gray-600 hover:text-gray-900 transition-colors">FAQ</a>
-                    <a href="https://briansavic.com" class="px-6 py-2 bg-green-600 text-white rounded-full hover:bg-green-700 transition-colors">Get Quote</a>
+                    <a href="#services" class="text-gray-600 hover:text-green-600 transition-colors duration-300">Services</a>
+                    <a href="#benefits" class="text-gray-600 hover:text-green-600 transition-colors duration-300">Benefits</a>
+                    <a href="#video" class="text-gray-600 hover:text-green-600 transition-colors duration-300">Video</a>
+                    <a href="#testimonials" class="text-gray-600 hover:text-green-600 transition-colors duration-300">Testimonials</a>
+                    <a href="#faq" class="text-gray-600 hover:text-green-600 transition-colors duration-300">FAQ</a>
+                    <a href="https://briansavic.com" class="px-6 py-2 bg-green-600 text-white rounded-full hover:bg-green-700 transition-all duration-300 transform hover:scale-105">Get Quote</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-button md:hidden focus:outline-none" aria-label="Toggle Menu">
+                    <i class="fas fa-bars text-2xl text-gray-600"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div class="mobile-menu hidden md:hidden mt-4 bg-white rounded-lg shadow-lg absolute left-0 right-0 p-4">
+                <div class="flex flex-col space-y-4">
+                    <a href="#services" class="text-gray-600 hover:text-green-600 transition-colors duration-300 py-2">Services</a>
+                    <a href="#benefits" class="text-gray-600 hover:text-green-600 transition-colors duration-300 py-2">Benefits</a>
+                    <a href="#video" class="text-gray-600 hover:text-green-600 transition-colors duration-300 py-2">Video</a>
+                    <a href="#testimonials" class="text-gray-600 hover:text-green-600 transition-colors duration-300 py-2">Testimonials</a>
+                    <a href="#faq" class="text-gray-600 hover:text-green-600 transition-colors duration-300 py-2">FAQ</a>
+                    <a href="https://briansavic.com" class="text-center px-6 py-2 bg-green-600 text-white rounded-full hover:bg-green-700 transition-all duration-300">Get Quote</a>
                 </div>
             </div>
         </nav>
     </header>
 
     <!-- Hero Section -->
-    <section class="relative min-h-screen flex items-center pt-16">
+    <section class="relative min-h-screen flex items-center pt-16 bg-gradient-to-br from-green-900 to-green-700">
         <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1502672260266-1c1ef2d93688')] bg-cover bg-center opacity-25"></div>
         <div class="absolute inset-0 bg-black opacity-75"></div>
         <div class="container mx-auto px-6 relative z-10">
             <div class="max-w-4xl">
                 <h1 class="text-4xl md:text-6xl font-bold text-white mb-6" data-aos="fade-up">Expert Arborist Services in Brisbane - Certified</h1>
-                <p class="text-xl md:text-2xl text-white/90 mb-8" data-aos="fade-up" data-aos-delay="100">Get Safe Tree Removal With Enhanced Curb Appeal</p>
-                <a href="https://briansavic.com" class="inline-block px-8 py-4 bg-green-600 text-white rounded-full text-lg font-semibold hover:bg-green-700 transform hover:scale-105 transition-all duration-300" data-aos="fade-up" data-aos-delay="200">Get Free Quote</a>
+                <p class="text-xl md:text-2xl text-white/90 mb-8" data-aos="fade-up" data-aos-delay="100">Professional Tree Care Services by Certified Arborists. Enhancing Property Value Through Expert Tree Management.</p>
+                <div class="flex gap-4" data-aos="fade-up" data-aos-delay="200">
+                    <a href="https://briansavic.com" class="inline-block px-8 py-4 bg-green-600 text-white rounded-full text-lg font-semibold hover:bg-green-700 transform hover:scale-105 transition-all duration-300">Get Free Quote</a>
+                    <a href="#video" class="inline-block px-8 py-4 bg-white text-green-700 rounded-full text-lg font-semibold hover:bg-gray-100 transform hover:scale-105 transition-all duration-300">Watch Video</a>
+                </div>
             </div>
         </div>
     </section>
@@ -42,28 +75,105 @@
         <div class="container mx-auto px-6">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Our Professional Services</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300" data-aos="fade-up">
+                <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 transform hover:scale-102" data-aos="fade-up">
                     <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
                         <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"></path>
                         </svg>
                     </div>
                     <h3 class="text-xl font-bold mb-4">Tree Removal</h3>
-                    <p class="text-gray-600">Professional and safe tree removal services with minimal impact on your property.</p>
+                    <p class="text-gray-600">Expert tree removal with advanced equipment and safety protocols. We ensure minimal impact on your property while maintaining the highest safety standards.</p>
                 </div>
-                <!-- Additional service cards... -->
+
+                <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 transform hover:scale-102" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Tree Pruning</h3>
+                    <p class="text-gray-600">Strategic pruning services to enhance tree health and aesthetics. Our certified arborists understand the science of proper tree maintenance.</p>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 transform hover:scale-102" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Stump Grinding</h3>
+                    <p class="text-gray-600">Complete stump removal using state-of-the-art grinding equipment. Reclaim your yard space and prevent pest infestations.</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Video Section -->
-    <section class="py-24 bg-white">
+    <section id="video" class="py-24 bg-white">
         <div class="container mx-auto px-6">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">See Our Expertise in Action</h2>
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-8">Watch Our Experts in Action</h2>
+            <p class="text-xl text-gray-600 text-center mb-16">See how we transform properties with our professional tree care services</p>
             <div class="relative w-full max-w-4xl mx-auto rounded-xl overflow-hidden shadow-2xl" data-aos="zoom-in">
                 <div class="relative pb-[56.25%]">
                     <iframe class="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/1KDNiKS0a6A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
+            </div>
+            <p class="text-center mt-8 text-gray-600">Learn how our certified arborists can help protect and enhance your property's value</p>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-24 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">What Our Clients Say</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300" data-aos="fade-up">
+                    <div class="flex items-center mb-4">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e" alt="John Smith" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">John Smith</h4>
+                            <p class="text-gray-600">Homeowner in Brisbane</p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600">"The team's expertise in handling our complex tree removal project was impressive. They completed the job safely and efficiently, leaving our property spotless. Highly recommended!"</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center mb-4">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80" alt="Sarah Johnson" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Sarah Johnson</h4>
+                            <p class="text-gray-600">Property Manager</p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600">"Professional, punctual, and precise. Their tree maintenance program has significantly improved the appearance and health of our property's trees. Outstanding service!"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">About Us</h2>
+            <div class="max-w-3xl mx-auto text-center">
+                <p class="text-gray-600 leading-relaxed" data-aos="fade-up">
+                    Founded in 2010, Brisbane Arborists has grown to become the region's most trusted tree care service provider. Our team of certified arborists combines decades of experience with cutting-edge techniques and equipment to deliver exceptional results. We're committed to maintaining the highest standards of safety and environmental responsibility while enhancing the beauty and value of your property.
+                </p>
             </div>
         </div>
     </section>
@@ -73,20 +183,25 @@
         <div class="container mx-auto px-6">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Frequently Asked Questions</h2>
             <div class="max-w-3xl mx-auto space-y-6">
-                <div class="bg-white rounded-lg shadow-md p-6" data-aos="fade-up">
-                    <h3 class="text-xl font-semibold mb-4">What areas do you service in Brisbane?</h3>
-                    <p class="text-gray-600">We service all Brisbane metropolitan areas and surrounding suburbs.</p>
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300" data-aos="fade-up">
+                    <h3 class="text-xl font-semibold mb-4">What qualifications do your arborists have?</h3>
+                    <p class="text-gray-600">All our arborists are certified by the International Society of Arboriculture (ISA) and have extensive experience in tree care. We maintain ongoing training to stay current with the latest industry standards and safety protocols.</p>
                 </div>
-                <!-- Additional FAQ items... -->
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-xl font-semibold mb-4">Do you provide emergency tree services?</h3>
+                    <p class="text-gray-600">Yes, we offer 24/7 emergency tree services for storm damage, fallen trees, and other urgent situations. Our rapid response team is always ready to handle any tree-related emergency safely and efficiently.</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- CTA Section -->
     <section class="relative py-24 bg-green-700">
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1542273917363-3b1817f69a2d')] bg-cover bg-center opacity-20"></div>
         <div class="container mx-auto px-6 relative z-10">
             <div class="text-center">
                 <h2 class="text-3xl md:text-4xl font-bold text-white mb-8">Ready to Transform Your Property?</h2>
+                <p class="text-xl text-white/90 mb-8">Get your free consultation and quote today!</p>
                 <a href="https://briansavic.com" class="inline-block px-8 py-4 bg-white text-green-700 rounded-full text-lg font-semibold hover:bg-gray-100 transform hover:scale-105 transition-all duration-300">Get Started Today</a>
             </div>
         </div>
@@ -95,21 +210,38 @@
     <!-- Footer -->
     <footer class="bg-gray-900 text-white py-16">
         <div class="container mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
                 <div>
                     <h3 class="text-xl font-bold mb-4">Contact Us</h3>
                     <p class="mb-2">Email: quotearborist@gmail.com</p>
+                    <p class="mb-2">Phone: (07) 3xxx xxxx</p>
+                    <p>Brisbane, QLD 4000</p>
                 </div>
                 <div>
                     <h3 class="text-xl font-bold mb-4">Quick Links</h3>
                     <ul class="space-y-2">
                         <li><a href="#services" class="hover:text-green-400 transition-colors">Services</a></li>
+                        <li><a href="#about" class="hover:text-green-400 transition-colors">About Us</a></li>
+                        <li><a href="#testimonials" class="hover:text-green-400 transition-colors">Testimonials</a></li>
                         <li><a href="#faq" class="hover:text-green-400 transition-colors">FAQ</a></li>
                     </ul>
                 </div>
                 <div>
+                    <h3 class="text-xl font-bold mb-4">Legal</h3>
+                    <ul class="space-y-2">
+                        <li><a href="https://briansavic.github.io/-expert-arborist-services-in-brisbane---certified--2025-04-29-9xo2l/privacy.html" class="hover:text-green-400 transition-colors">Privacy Policy</a></li>
+                        <li><a href="https://briansavic.github.io/-expert-arborist-services-in-brisbane---certified--2025-04-29-9xo2l/terms.html" class="hover:text-green-400 transition-colors">Terms of Service</a></li>
+                        <li><a href="https://briansavic.github.io/-expert-arborist-services-in-brisbane---certified--2025-04-29-9xo2l/blog.html" class="hover:text-green-400 transition-colors">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
                     <h3 class="text-xl font-bold mb-4">Follow Us</h3>
-                    <!-- Social media links -->
+                    <div class="flex space-x-4">
+                        <a href="#" class="hover:text-green-400 transition-colors"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="hover:text-green-400 transition-colors"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="hover:text-green-400 transition-colors"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="hover:text-green-400 transition-colors"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
                 </div>
             </div>
             <div class="mt-12 pt-8 border-t border-gray-800 text-center">
@@ -124,6 +256,35 @@
             duration: 1000,
             once: true
         });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.querySelector('header nav .mobile-menu-button');
+            const mobileMenu = document.querySelector('header nav .mobile-menu');
+            
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                    const icon = mobileMenuButton.querySelector('i');
+                    if (icon) {
+                        icon.classList.toggle('fa-bars');
+                        icon.classList.toggle('fa-times');
+                    }
+                });
+
+                const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+                mobileMenuLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                        const icon = mobileMenuButton.querySelector('i');
+                        if (icon) {
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                        }
+                    });
+                });
+            }
+        });
     </script>
+</body>
 </body>
 </html>
