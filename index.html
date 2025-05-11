@@ -44,24 +44,25 @@
     <a href="mailto:quote@arboristbrisbane.com.au?subject=Quote%20request&cc=briansavic@me.com&body=Please%20provide%20your%20best%20details%20below%3A%0D%0A%0D%0AYour%20Full%20name%3A%0D%0AYour%20best%20email%3A%0D%0AYour%20Phone%3A%0D%0AYour%20Suburb%3A%0D%0AAny%20message%20or%20details%20to%20be%20included%20so%20we%20can%20understand%20the%20problem%20you%20are%20facing%3A" class="text-gray-600 hover:text-green-600 transition-colors duration-300">Contact</a>
 </div>
 
-                <!-- Mobile Menu Button -->
-                <button class="mobile-menu-button md:hidden focus:outline-none" aria-label="Toggle Menu">
-                    <i class="fas fa-bars text-2xl text-gray-600"></i>
-                </button>
-            </div>
+          <!-- Mobile Menu Button -->
+<button class="mobile-menu-button md:hidden focus:outline-none" aria-label="Toggle Menu">
+    <i class="fas fa-bars text-2xl text-gray-600"></i>
+</button>
 
-            <!-- Mobile Menu -->
-            <div class="mobile-menu hidden md:hidden mt-4 bg-white rounded-lg shadow-lg absolute left-0 right-0 p-4">
-                <div class="hidden md:flex space-x-8">
-    <a href="#about" class="text-gray-600 hover:text-green-600 transition-colors duration-300">About Us</a>
-    <a href="#services" class="text-gray-600 hover:text-green-600 transition-colors duration-300">Services</a>
-    <a href="#benefits" class="text-gray-600 hover:text-green-600 transition-colors duration-300">Benefits</a>
-    <a href="#video" class="text-gray-600 hover:text-green-600 transition-colors duration-300">Video</a>
-    <a href="#testimonials" class="text-gray-600 hover:text-green-600 transition-colors duration-300">Testimonials</a>
-    <a href="#faq" class="text-gray-600 hover:text-green-600 transition-colors duration-300">FAQ</a>
-    <a href="mailto:quote@arboristbrisbane.com.au?subject=Quote%20request&cc=briansavic@me.com&body=Please%20provide%20your%20best%20details%20below%3A%0D%0A%0D%0AYour%20Full%20name%3A%0D%0AYour%20best%20email%3A%0D%0AYour%20Phone%3A%0D%0AYour%20Suburb%3A%0D%0AAny%20message%20or%20details%20to%20be%20included%20so%20we%20can%20understand%20the%20problem%20you%20are%20facing%3A" class="text-gray-600 hover:text-green-600 transition-colors duration-300">Contact</a>
+<!-- Mobile Menu -->
+<div class="mobile-menu hidden md:hidden mt-4 bg-white rounded-lg shadow-lg absolute left-0 right-0 p-4">
+    <div class="flex flex-col space-y-4">
+        <a href="#about" class="text-gray-600 hover:text-green-600 transition-colors duration-300">About Us</a>
+        <a href="#services" class="text-gray-600 hover:text-green-600 transition-colors duration-300">Services</a>
+        <a href="#benefits" class="text-gray-600 hover:text-green-600 transition-colors duration-300">Benefits</a>
+        <a href="#video" class="text-gray-600 hover:text-green-600 transition-colors duration-300">Video</a>
+        <a href="#testimonials" class="text-gray-600 hover:text-green-600 transition-colors duration-300">Testimonials</a>
+        <a href="#faq" class="text-gray-600 hover:text-green-600 transition-colors duration-300">FAQ</a>
+        <a href="mailto:quote@arboristbrisbane.com.au?subject=Quote%20request&cc=briansavic@me.com&body=Please%20provide%20your%20best%20details%20below%3A%0D%0A%0D%0AYour%20Full%20name%3A%0D%0AYour%20best%20email%3A%0D%0AYour%20Phone%3A%0D%0AYour%20Suburb%3A%0D%0AAny%20message%20or%20details%20to%20be%20included%20so%20we%20can%20understand%20the%20problem%20you%20are%20facing%3A" class="text-gray-600 hover:text-green-600 transition-colors duration-300">
+            Contact
+        </a>
+    </div>
 </div>
-            </div>
         </nav>
     </header>
 
@@ -452,33 +453,38 @@
             once: true
         });
 
-        document.addEventListener('DOMContentLoaded', function() {
-            const mobileMenuButton = document.querySelector('header nav .mobile-menu-button');
-            const mobileMenu = document.querySelector('header nav .mobile-menu');
+       document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('.mobile-menu-button');
+    const mobileMenu = document.querySelector('.mobile-menu');
 
-            if (mobileMenuButton && mobileMenu) {
-                mobileMenuButton.addEventListener('click', () => {
-                    mobileMenu.classList.toggle('hidden');
-                    const icon = mobileMenuButton.querySelector('i');
-                    if (icon) {
-                        icon.classList.toggle('fa-bars');
-                        icon.classList.toggle('fa-times');
-                    }
-                });
+    if (mobileMenuButton && mobileMenu) {
+        // Toggle menu visibility on button click
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
 
-                const mobileMenuLinks = mobileMenu.querySelectorAll('a');
-                mobileMenuLinks.forEach(link => {
-                    link.addEventListener('click', () => {
-                        mobileMenu.classList.add('hidden');
-                        const icon = mobileMenuButton.querySelector('i');
-                        if (icon) {
-                            icon.classList.remove('fa-times');
-                            icon.classList.add('fa-bars');
-                        }
-                    });
-                });
+            // Toggle the icon between 'fa-bars' and 'fa-times'
+            const icon = mobileMenuButton.querySelector('i');
+            if (icon) {
+                icon.classList.toggle('fa-bars');
+                icon.classList.toggle('fa-times');
             }
         });
+
+        // Close the menu when any link inside the menu is clicked
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+
+                const icon = mobileMenuButton.querySelector('i');
+                if (icon) {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+        });
+    }
+});
     </script>
 </body>
 </html>
