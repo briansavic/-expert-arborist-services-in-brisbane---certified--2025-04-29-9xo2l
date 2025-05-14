@@ -207,6 +207,126 @@
         </div>
     </section>
 
+<!-- Arborist Hiring Calculator Section -->
+<section id="arborist-calculator" class="py-24 bg-white">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-8">Arborist Hiring Calculator</h2>
+        <p class="text-center text-gray-600 mt-0 mb-12 max-w-2xl mx-auto text-lg">
+            Estimate the cost of tree services. Select the tree size, service type, and number of trees to get an approximate cost. For a precise quote, a free site inspection is recommended.
+        </p>
+        <div class="max-w-lg mx-auto"> 
+            <style>
+                /* Using a more specific outer class for the arborist calculator to avoid style conflicts */
+                #arborist-calculator .calculator-arborist-styles { 
+                    font-family: Arial, sans-serif;
+                    /* background-color: #f4f4f9; /* Removed, section bg is white */
+                    margin: 0;
+                    padding: 0; /* Reset padding for this specific style block container */
+                }
+                #arborist-calculator .calculator-arborist { 
+                    background-color: #fff;
+                    border-radius: 10px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                    padding: 30px; 
+                    width: 100%; 
+                    max-width: 480px; 
+                    margin: 20px auto; 
+                }
+                /* h1 style from image is not directly used as section has its own h2 */
+                #arborist-calculator .calculator-arborist .form-group {
+                    margin-bottom: 20px; 
+                }
+                #arborist-calculator .calculator-arborist label {
+                    display: block;
+                    margin-bottom: 8px; 
+                    font-weight: bold;
+                    color: #2c3e50;
+                    font-size: 0.9rem; 
+                }
+                #arborist-calculator .calculator-arborist select,
+                #arborist-calculator .calculator-arborist input[type="number"] {
+                    width: 100%;
+                    padding: 12px; 
+                    border: 1px solid #ccc;
+                    border-radius: 5px;
+                    box-sizing: border-box;
+                    font-size: 1rem; 
+                    color: #333; /* Added text color for inputs */
+                }
+                #arborist-calculator .calculator-arborist button {
+                    width: 100%;
+                    padding: 12px; 
+                    background-color: #2ecc71; 
+                    border: none;
+                    border-radius: 5px;
+                    color: white;
+                    font-size: 1rem; 
+                    font-weight: bold; 
+                    cursor: pointer;
+                    margin-bottom: 10px;
+                    transition: background-color 0.3s ease; 
+                }
+                #arborist-calculator .calculator-arborist button:hover {
+                    background-color: #27ae60; 
+                }
+                #arborist-calculator .calculator-arborist #resetButtonArborist { 
+                    background-color: #D1D5DB; /* Light grey as requested */
+                }
+                #arborist-calculator .calculator-arborist #resetButtonArborist:hover {
+                    background-color: #9CA3AF; 
+                }
+                #arborist-calculator .calculator-arborist #resultArborist { 
+                    margin-top: 25px; 
+                    font-size: 1.1rem; 
+                    text-align: center;
+                    color: #2c3e50;
+                    font-weight: bold; 
+                    padding: 15px; 
+                    background-color: #e9ecef; 
+                    border-radius: 5px; 
+                    min-height: 50px; /* Ensure space for message */
+                }
+                #arborist-calculator .calculator-arborist #inspectionNoteArborist { 
+                    margin-top: 15px; 
+                    font-size: 0.85rem; 
+                    text-align: center;
+                    color: #7f8c8d;
+                    font-style: italic;
+                    min-height: 20px; /* Ensure space for message */
+                }
+            </style>
+            <div class="calculator-arborist-styles"> <!-- Wrapper for styles -->
+                <div class="calculator-arborist"> 
+                    <div class="form-group">
+                        <label for="treeSizeArborist">Tree Size:</label>
+                        <select id="treeSizeArborist">
+                            <option value="150">Small (under 30 feet)</option>
+                            <option value="450">Medium (30-60 feet)</option>
+                            <option value="900">Large (60-100 feet)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="serviceTypeArborist">Service Type:</label>
+                        <select id="serviceTypeArborist">
+                            <option value="200">Tree trimming/pruning</option>
+                            <option value="500">Tree removal</option>
+                            <option value="100">Stump grinding</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="numberOfTreesArborist">Number of Trees:</label>
+                        <input type="number" id="numberOfTreesArborist" value="1" min="1">
+                    </div>
+                    <button onclick="calculateArboristCost()">Calculate Cost</button>
+                    <button id="resetButtonArborist" onclick="resetArboristForm()">Reset</button>
+                    <div id="resultArborist"></div>
+                    <div id="inspectionNoteArborist"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Arborist Hiring Calculator Section -->
     <!-- Testimonials Section -->
 <section id="testimonials" class="py-24 bg-gray-50">
     <div class="container mx-auto px-6">
@@ -485,6 +605,31 @@
         });
     }
 });
+function calculateArboristCost() {
+    const treeSize = parseInt(document.getElementById('treeSizeArborist').value);
+    const serviceType = parseInt(document.getElementById('serviceTypeArborist').value);
+    const numberOfTrees = parseInt(document.getElementById('numberOfTreesArborist').value);
+    const resultDiv = document.getElementById('resultArborist');
+    const inspectionNoteDiv = document.getElementById('inspectionNoteArborist');
+
+    if (isNaN(numberOfTrees) || numberOfTrees < 1) {
+        resultDiv.innerText = 'Please enter a valid number of trees.';
+        inspectionNoteDiv.innerText = '';
+        return;
+    }
+
+    const cost = (treeSize + serviceType) * numberOfTrees;
+    resultDiv.innerText = `Estimated Cost: $${cost}`;
+    inspectionNoteDiv.innerText = 'To get a more accurate quote, get a free site inspection.';
+}
+
+function resetArboristForm() {
+    document.getElementById('treeSizeArborist').value = '150';
+    document.getElementById('serviceTypeArborist').value = '200';
+    document.getElementById('numberOfTreesArborist').value = '1';
+    document.getElementById('resultArborist').innerText = '';
+    document.getElementById('inspectionNoteArborist').innerText = '';
+}
     </script>
 </body>
 </html>
