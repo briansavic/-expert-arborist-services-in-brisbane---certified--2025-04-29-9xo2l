@@ -21,49 +21,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-        /* Add this to your existing CSS or in the <head> section */
-.viewer-counter {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  background-color: rgba(0, 0, 0, 0.7);
-  color: white;
-  padding: 8px 15px;
-  border-radius: 20px;
-  display: flex;
-  align-items: center;
-  font-size: 14px;
-  font-weight: bold;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  z-index: 10;
-  animation: pulse 2s infinite;
-}
-
-.viewer-icon {
-  margin-right: 8px;
-  font-size: 16px;
-}
-
-#viewer-count {
-  color: #ff4d4d;
-  margin-right: 4px;
-}
-
-@keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.03); }
-  100% { transform: scale(1); }
-}
-
-.increase {
-  color: #4dff4d !important;
-  transition: color 0.5s;
-}
-
-.decrease {
-  color: #ff4d4d !important;
-  transition: color 0.5s;
-}
 </head>
 <body class="font-sans antialiased bg-white">
     <!-- Header -->
@@ -242,11 +199,6 @@
             <div class="relative w-full max-w-4xl mx-auto rounded-xl overflow-hidden shadow-2xl" data-aos="zoom-in">
                 <div class="relative pb-[56.25%]">
                     <iframe class="absolute inset-0 w-full h-full" src="https://media.publit.io/file/tree-care-services.mp4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                   <!-- Add this inside your video container element -->
-<div class="viewer-counter">
-  <div class="viewer-icon">👁️</div>
-  <div class="counter-text"><span id="viewer-count">111</span> People Are Watching This Video!</div>
-</div>     
                 </div>
             </div>
             <p class="text-center mt-8 text-gray-600">Learn how our certified arborists can help protect and enhance your property's value</p>
@@ -684,49 +636,5 @@ function resetArboristForm() {
     document.getElementById('inspectionNoteArborist').innerText = '';
 }
     </script>
-        <script>
-  // Viewer counter functionality
-  document.addEventListener('DOMContentLoaded', function() {
-    let viewerCount = 111;
-    const viewerCountElement = document.getElementById('viewer-count');
-    
-    function updateViewerCount() {
-      viewerCountElement.textContent = viewerCount;
-    }
-    
-    function getRandomViewerChange() {
-      const changeOptions = [-3, -2, -1, 0, 1, 1, 2, 2, 3, 3, 4, 5];
-      return changeOptions[Math.floor(Math.random() * changeOptions.length)];
-    }
-    
-    function fluctuateViewers() {
-      const change = getRandomViewerChange();
-      viewerCount += change;
-      
-      if (viewerCount < 111) {
-        viewerCount = 111;
-      }
-      
-      if (Math.random() < 0.1) {
-        viewerCount += Math.floor(Math.random() * 10) + 5;
-      }
-      
-      updateViewerCount();
-      
-      if (change > 0) {
-        viewerCountElement.classList.add('increase');
-        setTimeout(() => viewerCountElement.classList.remove('increase'), 500);
-      } else if (change < 0) {
-        viewerCountElement.classList.add('decrease');
-        setTimeout(() => viewerCountElement.classList.remove('decrease'), 500);
-      }
-      
-      const nextUpdateTime = 2000 + Math.random() * 3000;
-      setTimeout(fluctuateViewers, nextUpdateTime);
-    }
-    
-    fluctuateViewers();
-  });
-</script>
 </body>
 </html>
