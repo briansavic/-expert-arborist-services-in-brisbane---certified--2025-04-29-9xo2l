@@ -76,7 +76,7 @@
         <nav class="container mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
                 <!-- Replaced text with logo -->
-                <a href="https://briansavic.github.io/-expert-arborist-services-in-brisbane---certified--2025-04-29-9xo2l">
+                <a href="https://arboristbrisbane.com.au/">
                     <img src="logo.png" alt="Brisbane Arborist Logo" class="h-10"> <!-- Adjust height (e.g., h-10) as needed -->
                 </a>
 
@@ -604,8 +604,8 @@
                 <div>
                     <h3 class="text-xl font-bold mb-4">Legal</h3>
                     <ul class="space-y-2">
-                        <li><a href="https://briansavic.github.io/-expert-arborist-services-in-brisbane---certified--2025-04-29-9xo2l/privacy.html" class="hover:text-green-400 transition-colors">Privacy|Terms|Disclaimer </a></li>
-                        <li><a href="https://briansavic.github.io/-expert-arborist-services-in-brisbane---certified--2025-04-29-9xo2l/blog.html" class="hover:text-green-400 transition-colors">Blog</a></li>
+                        <li><a href="privacy.html" class="hover:text-green-400 transition-colors">Privacy|Terms|Disclaimer </a></li>
+                        <li><a href="blog.html" class="hover:text-green-400 transition-colors">Blog</a></li>
                     </ul>
                 </div>
                 <div>
@@ -689,52 +689,49 @@ function resetArboristForm() {
     document.getElementById('inspectionNoteArborist').innerText = '';
 }
     </script>
-</body>
-</html>
-
-<script>
-  // Viewer counter functionality
-  document.addEventListener('DOMContentLoaded', function() {
-    let viewerCount = 111;
-    const viewerCountElement = document.getElementById('viewer-count');
-    
-    function updateViewerCount() {
-      viewerCountElement.textContent = viewerCount;
-    }
-    
-    function getRandomViewerChange() {
-      const changeOptions = [-3, -2, -1, 0, 1, 1, 2, 2, 3, 3, 4, 5];
-      return changeOptions[Math.floor(Math.random() * changeOptions.length)];
-    }
-    
-    function fluctuateViewers() {
-      const change = getRandomViewerChange();
-      viewerCount += change;
-      
-      if (viewerCount < 111) {
-        viewerCount = 111;
-      }
-      
-      if (Math.random() < 0.1) {
-        viewerCount += Math.floor(Math.random() * 10) + 5;
-      }
-      
-      updateViewerCount();
-      
-      if (change > 0) {
-        viewerCountElement.classList.add('increase');
-        setTimeout(() => viewerCountElement.classList.remove('increase'), 500);
-      } else if (change < 0) {
-        viewerCountElement.classList.add('decrease');
-        setTimeout(() => viewerCountElement.classList.remove('decrease'), 500);
-      }
-      
-      const nextUpdateTime = 2000 + Math.random() * 3000;
-      setTimeout(fluctuateViewers, nextUpdateTime);
-    }
-    
-    fluctuateViewers();
-  });
-</script>
+    <script>
+      // Viewer counter functionality
+      document.addEventListener('DOMContentLoaded', function() {
+        let viewerCount = 111;
+        const viewerCountElement = document.getElementById('viewer-count');
+        
+        function updateViewerCount() {
+          viewerCountElement.textContent = viewerCount;
+        }
+        
+        function getRandomViewerChange() {
+          const changeOptions = [-3, -2, -1, 0, 1, 1, 2, 2, 3, 3, 4, 5];
+          return changeOptions[Math.floor(Math.random() * changeOptions.length)];
+        }
+        
+        function fluctuateViewers() {
+          const change = getRandomViewerChange();
+          viewerCount += change;
+          
+          if (viewerCount < 111) {
+            viewerCount = 111;
+          }
+          
+          if (Math.random() < 0.1) {
+            viewerCount += Math.floor(Math.random() * 10) + 5;
+          }
+          
+          updateViewerCount();
+          
+          if (change > 0) {
+            viewerCountElement.classList.add('increase');
+            setTimeout(() => viewerCountElement.classList.remove('increase'), 500);
+          } else if (change < 0) {
+            viewerCountElement.classList.add('decrease');
+            setTimeout(() => viewerCountElement.classList.remove('decrease'), 500);
+          }
+          
+          const nextUpdateTime = 2000 + Math.random() * 3000;
+          setTimeout(fluctuateViewers, nextUpdateTime);
+        }
+        
+        fluctuateViewers();
+      });
+    </script>
 </body>
 </html>
